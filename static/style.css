@@ -1,0 +1,114 @@
+* {
+box-sizing: border-box;
+}
+
+*:focus {
+outline: none;
+}
+body {
+    font-family: Arial, sans-serif;
+background-color: #3498DB;
+padding: 50px;
+}
+.login {
+    margin: 20px auto;
+    width: 800px;
+    height: 800px;
+}
+
+.login-screen {
+background-color: #FFF;
+padding-bottom: 60px;
+border-radius: 10px;
+}
+
+.result-screen {
+    margin: 20px auto;
+    background-color: #FFF;
+/*padding: 20px;*/
+border-radius: 10px;
+    height:300px;
+    width: 300px;
+}
+
+.app-title {
+text-align: center;
+    padding-top:5px;
+color: #777;
+}
+
+.result {
+    position: relative;
+    float: left;
+    color: #777;
+    left: 280px;
+    padding: 2px 2px;
+    font-size: large;
+}
+.result-box {
+    position:relative;
+    left: 290px;
+    bottom: 25px;
+    border: none;
+    border-radius: 4px;
+    line-height: 35px;
+    width: 150px;
+    padding: 2px 2px;
+    text-align: center;
+    float: left;
+    background-color: #ECF0F1;
+}
+
+.login-form {
+text-align: center;
+}
+.control-group {
+margin-bottom: 10px;
+}
+
+.textarea {
+background-color: #ECF0F1;
+border: 2px solid transparent;
+border-radius: 3px;
+font-size: 16px;
+font-weight: 200;
+padding: 20px;
+    margin:20px;
+width: 600px;
+height: 300px;
+transition: border .5s;
+}
+
+
+input:focus {
+border: 2px solid #3498DB;
+box-shadow: none;
+}
+
+.btn {
+border: 2px solid transparent;
+background: #3498DB;
+color: #ffffff;
+font-size: 16px;
+line-height: 25px;
+padding: 10px 0;
+text-decoration: none;
+text-shadow: none;
+border-radius: 3px;
+box-shadow: none;
+transition: 0.25s;
+display: block;
+width: 250px;
+    margin: 0 auto;margin-bottom: 20px;
+}
+
+.btn:hover {
+background-color: #2980B9;
+}
+
+.login-link {
+font-size: 12px;
+color: #444;
+display: block;
+margin-top: 12px;
+}
