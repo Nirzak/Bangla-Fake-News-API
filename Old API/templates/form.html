@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="../static/style.css" type="text/css">
+<!--&#123;% block body %&#125;-->
+
+
+<form action="/" method="POST">
+<div class="login">
+<div class="login-screen">
+<div class="app-title">
+<h1>News Check</h1>
+</div>
+<div class="login-form">
+<div class="control-group">
+				<textarea class="textarea" cols="50" rows="15" name="news"></textarea>
+	<!--<label class="login-field-icon fui-user" ></label></div>-->
+<!--<div class="control-group">-->
+<!--				<input type="password" class="login-field" value="" placeholder="password" name="password">
+<label class="login-field-icon fui-lock"></label>-->
+	<input type="submit" value="Check" class="btn btn-primary btn-large btn-block">
+</div>
+</div>
+<label class="result">Result:</label> <p id="output" class="result-box">{{value}} </p>
+</div>
+</div>
+</form>
+
+<!--<div action="/check" method="POST">-->
+<!--<div class="result-screen">
+<div class="app-title">
+<h1>Result</h1>
+</div>
+
+    <p id="output" class="login-field-icon fui-lock" style="padding: 20px">{{value}} </p>
+</div>
+</div>
+-->

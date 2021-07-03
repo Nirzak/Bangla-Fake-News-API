@@ -10,12 +10,12 @@ for p in string.punctuation.lstrip():
     punctuation_list.append(p)
 
 def prediction(txt):
-    infile = open("tfidf_char_pkl", 'rb')
+    infile = open("D:/01 Research/Fake News/API/tfidf_char_pkl", 'rb')
     tfidf_char = pickle.load(infile)
     infile.close()
     x = tfidf_char.transform([txt])
     # print(x.shape)
-    infile = open("model", 'rb')
+    infile = open("D:/01 Research/Fake News/API/model", 'rb')
     clf = pickle.load(infile)
     infile.close()
     y_pred = clf.predict(x)
@@ -44,27 +44,20 @@ def clean(doc):
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/')
-def home():
-
-    return render_template('form.html')
-
-
-
 @app.route("/", methods=['POST'])
 def predict():
 
-    # doc = request.json['data']
-    doc = request.form["news"]
+    doc = request.json['data']
+    #doc = request.form["news"]
     print(doc)
     txt = clean(doc)
 
-    infile = open("tfidf_char_pkl", 'rb')
+    infile = open("D:/01 Research/Fake News/API/tfidf_char_pkl", 'rb')
     tfidf_char = pickle.load(infile)
     infile.close()
     x = tfidf_char.transform([txt])
     # print(x.shape)
-    infile = open("model", 'rb')
+    infile = open("D:/01 Research/Fake News/API/model", 'rb')
     clf = pickle.load(infile)
     infile.close()
     y_pred = clf.predict(x)
@@ -75,7 +68,8 @@ def predict():
     print(y_pred)
     ret = '{"prediction":' + output + '}'
 
-    return render_template('form.html',value= output)
+    #return render_template('form.html',value= output)
+    return jsonify(result=output)
 
 
 # running REST interface, port=5000 for direct test
